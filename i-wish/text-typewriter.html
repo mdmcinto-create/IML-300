@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typewriter Test</title>
+  <style>
+    body {
+      background: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 50px;
+      text-align: center;
+    }
+
+    .typewriter-line {
+      min-height: 1.5em;
+      margin: 10px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="typewriter-container">
+    <p class="typewriter-line" id="line1"></p>
+    <p class="typewriter-line" id="line2"></p>
+    <p class="typewriter-line" id="line3"></p>
+  </div>
+
+  <script>
+    const texts = [
+      "I remember her well, the only other black girl at my highschool.",
+      "we always acknowledged each other in the hallway.",
+      "maybe she wanted to leave too."
+    ];
+
+    function typeWriter(element, text, speed = 100) {
+      let i = 0;
+      return new Promise((resolve) => {
+        function type() {
+          if (i < text.length) {
+            element.textContent += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+          } else {
+            resolve();
+          }
+        }
+        type();
+      });
+    }
+
+    async function startTyping() {
+      await typeWriter(document.getElementById('line1'), texts[0], 100);
+      await new Promise(r => setTimeout(r, 500));
+      await typeWriter(document.getElementById('line2'), texts[1], 100);
+      await new Promise(r => setTimeout(r, 500));
+      await typeWriter(document.getElementById('line3'), texts[2], 100);
+    }
+
+    window.onload = startTyping;
+  </script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Persistent audio -->
+  <script src="persistent-audio.js"></script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>my future</title>
+  <link rel="stylesheet" href="styles2.css">
+  <style>
+    .typewriter-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .typewriter-line {
+      min-height: 1.5em;
+      margin: 5px 0;
+      /* Start completely empty and invisible */
+      visibility: hidden;
+    }
+
+    .typewriter-line.active {
+      visibility: visible;
+    }
+  </style>
+</head>
+<body>
+  <!-- Dark overlay -->
+  <div class="overlay"></div>
+
+  <style>
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.95) !important;
+  }
+  
+  .typewriter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .typewriter-line {
+    min-height: 1.5em;
+    margin: 5px 0;
+  }
+</style>
+
+
+  <!-- Hidden audio -->
+  <audio id="background-audio" loop style="display: none;">
+    <source src="assets/index-assets/in-the-waiting-line_mp3juice.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Main content -->
+  <div class="content">
+    <br><br><br>
+    <div class="typewriter-container">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+      <p class="typewriter-line" data-text="hmm... it's not so bad here."></p>
+      <br>
+      <p class="typewriter-line" data-text="maybe i'll be okay."></p>
+      <br>
+      <p class="typewriter-line" data-text="or maybe not...i'm starting to feel trapped."></p>
+      <br>
+      <p class="typewriter-line" data-text="why don't i belong here?"></p>
+      <br>
+      <p class="typewriter-line" data-text="people here have very different views on how to live their lives."></p>
+      <br>
+      <p class="typewriter-line" data-text="most of them don't ever want to leave..."></p>
+    </div>
+    <br><br>
+    
+    <p><a href="page9.html">continue...</a></p>
+    <br><br><br>
+  </div>
+
+  <!-- Typewriter JavaScript - MUST come before audio-control.js -->
+  <script>
+    // Wait for everything to load
+    window.addEventListener('DOMContentLoaded', function() {
+      const lines = document.querySelectorAll('.typewriter-line');
+      
+      // Clear all text content immediately
+      lines.forEach(line => {
+        line.textContent = '';
+      });
+
+      function typeWriter(element, text, speed = 75) {
+        let i = 0;
+        element.classList.add('active'); // Make visible
+        
+        return new Promise((resolve) => {
+          function type() {
+            if (i < text.length) {
+              element.textContent += text.charAt(i);
+              i++;
+              setTimeout(type, speed);
+            } else {
+              resolve();
+            }
+          }
+          type();
+        });
+      }
+
+      async function typeAllLines() {
+        // Wait a moment for page to settle
+        await new Promise(resolve => setTimeout(resolve, 800));
+        
+        for (let line of lines) {
+          const text = line.getAttribute('data-text');
+          if (text) {
+            await typeWriter(line, text, 75); // 75ms per character for visible typing
+            await new Promise(resolve => setTimeout(resolve, 600)); // Pause between lines
+          }
+        }
+      }
+
+      // Start the typing effect
+      typeAllLines();
+    });
+  </script>
+
+  <!-- Audio control -->
+  <script src="audio-control.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Persistent audio -->
+  <script src="persistent-audio.js"></script>
+  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HTML demo</title>
+  <link rel="stylesheet" href="styles2.css" />
+  <style>
+    .specialCenter {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 20px;
+      min-height: 100vh;
+      background-color: #1a1a1a;
+      color: white;
+    }
+
+    .specialCenter img {
+      max-width: 80%;
+      margin: 10px 0;
+      border-radius: 8px;
+    }
+
+    .specialCenter a {
+      margin-top: 20px;
+      color: lightblue;
+      text-decoration: none;
+    }
+
+    .specialCenter a:hover {
+      text-decoration: underline;
+    }
+
+    .specialCenter h1 {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body class="specialCenter">
+  <!-- Hidden audio (continues from page 1) -->
+  <audio id="background-audio" loop style="display: none;">
+    <source src="assets/index-assets/in-the-waiting-line_mp3juice.mp3" type="audio/mpeg">
+  </audio>
+
+  <h1>don't let yourself get stuck here...</h1>
+  <br>
+  <img src="assets/page4-assets/back_home.jpg" alt="back_home" />
+  <br>
+  <a href="./page5.html">but it's so beautiful...time to make a choice.</a>
+
+  <!-- JavaScript for audio control -->
+  <script src="audio-control.js"></script>
+</body>
+</html>

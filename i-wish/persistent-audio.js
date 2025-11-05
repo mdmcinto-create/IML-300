@@ -1,6 +1,6 @@
 // Check if audio is already playing from another page
 if (!window.audioPlayer) {
-  window.audioPlayer = new Audio('assets/index-assets/in-the-waiting-line_mp3juice.mp3');
+  window.audioPlayer = new Audio('assets/index-assets/in-the-waiting-line_mp3juice_short.mp3');
   window.audioPlayer.loop = true;
   
   // Store reference globally

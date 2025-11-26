@@ -1,1 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centered Button with Fade</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      opacity: 1;
+      transition: opacity 0.8s ease;
+    }
 
+    body.fade-out {
+      opacity: 0;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <button id="clickMe">Click Me</button>
+
+  <script>
+    const button = document.getElementById("clickMe");
+
+    button.addEventListener("click", () => {
+      // Add fade-out class
+      document.body.classList.add("fade-out");
+
+      // Wait for the fade to finish, then redirect
+      setTimeout(() => {
+        window.location.href = "nextpage.html";
+      }, 800); // match CSS transition duration
+    });
+  </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Next Page</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #e0ffe0;
+      font-family: Arial, sans-serif;
+      opacity: 0;
+      transition: opacity 1s ease;
+    }
+
+    body.fade-in {
+      opacity: 1;
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to the Next Page!</h1>
+
+  <script>
+    // Add fade-in class once page loads
+    window.addEventListener("load", () => {
+      document.body.classList.add("fade-in");
+    });
+  </script>
+</body>
+
+
+</html>6

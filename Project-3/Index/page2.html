@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publications - Black Entertainment Collective</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .publications-grid {
+            max-width: 1200px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+        }
+
+        .publication-box {
+            padding: 0;
+            text-align: left;
+            border-radius: 10px;
+            background: #ffed94;
+            border: 2px solid #000;
+            transition: transform 0.3s, box-shadow 0.3s;
+            overflow: hidden;
+        }
+
+        .publication-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .publication-media {
+            width: 100%;
+            height: 300px;
+            background: #f0d975;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 2px solid #000;
+        }
+
+        .publication-media img,
+        .publication-media video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .publication-media-placeholder {
+            color: #000;
+            font-size: 1.2rem;
+            opacity: 0.5;
+        }
+
+        .publication-content {
+            padding: 2rem;
+        }
+
+        .publication-box h3 {
+            color: #000;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .publication-box .date {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-bottom: 1rem;
+        }
+
+        .publication-box p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .read-more {
+            display: inline-block;
+            padding: 0.6rem 1.5rem;
+            background: #000;
+            color: #ffed94;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .read-more:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        @media (max-width: 768px) {
+            .publications-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">The BEC</div>
+            <ul>
+                <li><a href="index.html">welcome</a></li>
+                <li><a href="page1.html">spotlight</a></li>
+                <li><a href="page2.html">publications</a></li>
+                <li><a href="page3.html">about</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Publications</h1>
+        <p>Stories, insights, and perspectives from the Black creative community</p>
+    </section>
+
+    <section class="publications-grid">
+        <div class="publication-box">
+            <div class="publication-media">
+                <img src="majormyra.jpg" alt="Article title">
+            </div>
+            <div class="publication-content">
+                <p class="date">November 20, 2025</p>
+                <h3>Article Title Goes Here</h3>
+                <p>Brief description or excerpt from the article. This gives readers a preview of what the full article contains and entices them to click through to read more.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+
+        <div class="publication-box">
+            <div class="publication-media">
+                <!-- Replace with: <video controls><source src="your-video.mp4" type="video/mp4"></video> -->
+                <span class="publication-media-placeholder">[Video]</span>
+            </div>
+            <div class="publication-content">
+                <p class="date">November 18, 2025</p>
+                <h3>Video Feature Title</h3>
+                <p>Description of the video content. Highlighting key moments and what viewers can expect to learn or experience from watching.</p>
+                <a href="#" class="read-more">Watch Now</a>
+            </div>
+        </div>
+
+        <div class="publication-box">
+            <div class="publication-media">
+                <!-- Replace with: <img src="your-image.jpg" alt="Article title"> -->
+                <span class="publication-media-placeholder">[Image]</span>
+            </div>
+            <div class="publication-content">
+                <p class="date">November 15, 2025</p>
+                <h3>Interview: Rising Director</h3>
+                <p>An in-depth conversation exploring the creative journey, inspirations, and future projects of an emerging filmmaker making waves in the industry.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+
+        <div class="publication-box">
+            <div class="publication-media">
+                <!-- Replace with: <img src="your-image.jpg" alt="Article title"> -->
+                <span class="publication-media-placeholder">[Image]</span>
+            </div>
+            <div class="publication-content">
+                <p class="date">November 12, 2025</p>
+                <h3>Behind the Scenes</h3>
+                <p>A look at the creative process behind groundbreaking work in television and film, featuring exclusive insights from the production team.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+
+        <div class="publication-box">
+            <div class="publication-media">
+                <!-- Replace with: <video controls><source src="your-video.mp4" type="video/mp4"></video> -->
+                <span class="publication-media-placeholder">[Video]</span>
+            </div>
+            <div class="publication-content">
+                <p class="date">November 10, 2025</p>
+                <h3>Industry Panel Discussion</h3>
+                <p>Watch our panel of screenwriters and directors discuss the evolving landscape of Black representation in entertainment and media.</p>
+                <a href="#" class="read-more">Watch Now</a>
+            </div>
+        </div>
+
+        <div class="publication-box">
+            <div class="publication-media">
+                <!-- Replace with: <img src="your-image.jpg" alt="Article title"> -->
+                <span class="publication-media-placeholder">[Image]</span>
+            </div>
+            <div class="publication-content">
+                <p class="date">November 8, 2025</p>
+                <h3>Spotlight on Screenwriting</h3>
+                <p>Exploring the craft of storytelling through the lens of talented Black screenwriters who are reshaping narratives in film and television.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; The Black Entertainment Collective. All rights reserved.</p>
+    </footer>
+</body>
+</html>

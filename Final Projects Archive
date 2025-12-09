@@ -1,1 +1,71 @@
 
+<!-- This was made with the help of Claude AI --> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milan's Project Archive</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 50px;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5em;
+            padding: 15px 40px;
+            border: 2px solid white;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            min-width: 300px;
+        }
+
+        a:hover {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Milan's Project Archive</h1>
+        
+        <div class="links">
+            <a href="https://drive.google.com/drive/folders/1iTC_3FlGn2Xqc7oGTtg9mM_lIe_Nn0k1" target="_blank">Vibe Coding</a>
+            <a href="https://drive.google.com/drive/folders/1XHiQJSicd1ImN5xLrW7V131Po7GXOByU">Project 1</a>
+            <a href="https://drive.google.com/drive/folders/1PBWrztnbDMkNJXjfjHHf1ZRUMiFFW8__">Project 2</a>
+            <a href="https://drive.google.com/drive/folders/1PEIeHDM8L7Rv-CSuTB5vhwt8uelh0uJa">Project 3</a>
+            <a href="https://drive.google.com/drive/folders/1PahAMeofgTwilCxBP2hD4NM4LXlCGjKZ">Coding Exercises</a>
+            <a href="https://drive.google.com/drive/folders/13Ajc47NSQlQFRMTamHEk69Tp5hQY_aF3">Pecha Cucha</a>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,50 +1,70 @@
+<!-- The formatting and bug checking was done with the help of Claude AI --> 
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Milan's Homepage</title>
-    <!--Update with your name-->
-  </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milan's Project Archive</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
 
-  <body>
-    <div>
-      <h1>Milan</h1>
-      <!--Update with your name-->
-      <p>
-        This is my website for <i>IML300 class</i>. Write a little bit about
-        yourself.
-      </p>
+        .container {
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 50px;
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5em;
+            padding: 15px 40px;
+            border: 2px solid white;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            display: inline-block;
+            min-width: 300px;
+        }
+
+        a:hover {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Milan's Project Archive</h1>
+        
+        <div class="links">
+            <a href="https://drive.google.com/drive/folders/1iTC_3FlGn2Xqc7oGTtg9mM_lIe_Nn0k1" target="_blank">Vibe Coding</a>
+            <a href="https://drive.google.com/drive/folders/1XHiQJSicd1ImN5xLrW7V131Po7GXOByU">Project 1</a>
+            <a href="https://drive.google.com/drive/folders/1PBWrztnbDMkNJXjfjHHf1ZRUMiFFW8__">Project 2</a>
+            <a href="https://drive.google.com/drive/folders/1PEIeHDM8L7Rv-CSuTB5vhwt8uelh0uJa">Project 3</a>
+            <a href="https://drive.google.com/drive/folders/1PahAMeofgTwilCxBP2hD4NM4LXlCGjKZ">Coding Exercises</a>
+            <a href="https://drive.google.com/drive/folders/13Ajc47NSQlQFRMTamHEk69Tp5hQY_aF3">Pecha Cucha</a>
+        </div>
     </div>
-
-    <div>
-      <h1>Presentation</h1>
-      <a href="">Pecha Kucha: Lorem Ipsum</a>
-    </div>
-
-    <div>
-      <h1>Projects</h1>
-      <h2>Project 1: Interactive Audio & Visual with p5.js</h2>
-      <a href="">Final: Lorem Ipsum</a>
-      <h2>Project 2: HyperNarrative</h2>
-      <a href="">Concept</a><br />
-      <a href="">Final: Lorem Ipsum</a>
-      <h2>Project 3: Networked Care</h2>
-      <a href="">Final: Lorem Ipsum</a>
-    </div>
-
-    <div>
-      <h1>Exercises</h1>
-      <ul>
-        <li><a href="">p5.js sketch 1</a></li>
-        <li><a href="">p5.js sketch 2</a></li>
-        <li><a href="">p5.js sketch 3</a></li>
-        <li><a href="">p5.js sketch 4</a></li>
-      </ul>
-    </div>
-
-    <!--add a h1 element called 'Thoughts' Below-->
-    <h1>Thoughts</h1>
-
-    <footer>Fall, 2025.</footer>
-  </body>
+</body>
 </html>

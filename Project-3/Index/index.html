@@ -5,11 +5,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Black Entertainment Collective</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        /* Hover opacity effect for all clickable elements */
+        a, .slide, .indicator, button, [data-link] {
+            transition: opacity 0.3s ease;
+        }
+
+        a:hover, .slide:hover, .indicator:hover, button:hover, [data-link]:hover {
+            opacity: 0.5;
+        }
+
+        /* Logo hover effect */
+        .logo {
+            transition: opacity 0.3s ease;
+        }
+
+        .logo:hover {
+            opacity: 0.5;
+        }
+
+        /* Carousel Styles */
+        .carousel-container {
+            max-width: 1200px;
+            margin: 0 auto 60px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .carousel-wrapper {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .carousel-slides {
+            display: flex;
+            height: 100%;
+            transition: transform 0.6s ease-in-out;
+        }
+
+        .slide {
+            min-width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+        }
+
+        .slide:hover {
+            opacity: 0.9;
+        }
+
+        .slide-content {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .slide-title {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .slide-description {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .slide-link-text {
+            font-size: 14px;
+            color: #999;
+            text-decoration: underline;
+        }
+
+        .carousel-indicators {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 20px;
+            background: #fafafa;
+        }
+
+        .indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #ddd;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .indicator.active {
+            background: #333;
+            transform: scale(1.2);
+        }
+
+        .indicator:hover {
+            background: #666;
+        }
+
+        .slide img {
+            max-width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav>
-            <div class="logo">The BEC</div>
+            <a href="index.html" class="logo">The BEC</a>
             <ul>
                 <li><a href="index.html">welcome</a></li>
                 <li><a href="page1.html">spotlight</a></li>
@@ -20,33 +137,151 @@
     </header>
 
     <section class="hero">
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
-   <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
         <h1>Black<br>Entertainment<br>Collective</h1>
         <p>The BEC aims to unite Black screenwriters, directors, and creatives in Film and Television spheres of the entertainment industry through publications highlighting rising influential creatives.</p>
         <a href="page1.html" class="btn">enter</a>
     </section>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
+    <br>
+    <br>
+    <br>
+
+  <!--  Carousel section!! -->
+    <div class="carousel-container">
+        <div class="carousel-wrapper">
+            <div class="carousel-slides">
+                <!-- Slide 1 -->
+                <div class="slide" data-link="page1.html">
+                    <div class="slide-content">
+                        <div class="slide-title">Featured Spotlight</div>
+                        <div class="slide-description">Discover rising talent in film and television</div>
+                        <div class="slide-link-text">Click to explore</div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="slide" data-link="page2.html">
+                    <div class="slide-content">
+                        <div class="slide-title">Latest Publications</div>
+                        <div class="slide-description">Read our newest articles and interviews</div>
+                        <div class="slide-link-text">Click to read more</div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="slide" data-link="page3.html">
+                    <div class="slide-content">
+                        <div class="slide-title">About The BEC</div>
+                        <div class="slide-description">Learn about our mission and community</div>
+                        <div class="slide-link-text">Click to learn more</div>
+                    </div>
+                </div>
+
+                <!-- Slide 4 -->
+                <div class="slide" data-link="page1.html">
+                    <div class="slide-content">
+                        <div class="slide-title">Director Showcase</div>
+                        <div class="slide-description">Meet the visionaries behind the camera</div>
+                        <div class="slide-link-text">Click to view</div>
+                    </div>
+                </div>
+
+                <!-- Slide 5 -->
+                <div class="slide" data-link="page2.html">
+                    <div class="slide-content">
+                        <div class="slide-title">Screenwriter Stories</div>
+                        <div class="slide-description">Insights from talented writers shaping narratives</div>
+                        <div class="slide-text">Click to discover</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel-indicators">
+            <span class="indicator active" data-slide="0"></span>
+            <span class="indicator" data-slide="1"></span>
+            <span class="indicator" data-slide="2"></span>
+            <span class="indicator" data-slide="3"></span>
+            <span class="indicator" data-slide="4"></span>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
     <footer>
         <p>&copy; The Black Entertainment Collective. All rights reserved.</p>
     </footer>
+
+    <script>
+        $(document).ready(function() {
+            let currentSlide = 0;
+            const totalSlides = $('.slide').length;
+            const slideWidth = 100;
+            let autoplay;
+
+            function goToSlide(slideIndex) {
+                if (slideIndex < 0) {
+                    currentSlide = totalSlides - 1;
+                } else if (slideIndex >= totalSlides) {
+                    currentSlide = 0;
+                } else {
+                    currentSlide = slideIndex;
+                }
+
+                const offset = -(currentSlide * slideWidth);
+                $('.carousel-slides').css('transform', `translateX(${offset}%)`);
+
+                $('.indicator').removeClass('active');
+                $(`.indicator[data-slide="${currentSlide}"]`).addClass('active');
+            }
+
+            function startAutoplay() {
+                autoplay = setInterval(function() {
+                    goToSlide(currentSlide + 1);
+                }, 5000);
+            }
+
+            function stopAutoplay() {
+                clearInterval(autoplay);
+            }
+
+            startAutoplay();
+
+            $('.carousel-container').hover(
+                function() {
+                    stopAutoplay();
+                },
+                function() {
+                    startAutoplay();
+                }
+            );
+
+            $('.indicator').click(function() {
+                const slideIndex = parseInt($(this).data('slide'));
+                goToSlide(slideIndex);
+                stopAutoplay();
+                startAutoplay();
+            });
+
+            $('.slide').click(function() {
+                const link = $(this).data('link');
+                window.location.href = link;
+            });
+        });
+    </script>
 </body>
 </html>
